@@ -24,7 +24,7 @@ public:
     WavWriter::~WavWriter();
 
     bool WavWriter::init(int samplerate, int bits, int channels);
-    void WavWriter::write(float in[CHANNELS_OUT][HOP_SIZE]);
+    void WavWriter::write(float in[CHANNELS][BLOCKSIZE]);
     bool WavWriter::close();
     bool WavWriter::getClear();
 

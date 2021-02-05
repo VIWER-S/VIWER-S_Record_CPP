@@ -9,6 +9,7 @@
 */
 
 #include "WavWriter.h"
+#include "Constants.h"
 
 WavWriter::WavWriter() {}
 
@@ -58,22 +59,24 @@ bool WavWriter::init(int samplerate, int bits, int channels) {
     }
 }
 
-void WavWriter::write(float in[CHANNELS_OUT][HOP_SIZE]) {
+void WavWriter::write(float in[CHANNELS][BLOCKSIZE]) {
 
     if (m_isClear) {
 
         m_isClear = false;
 
-        DBG("Recording");
+        //DBG("Recording");
 
-        for (int iSample = 0; iSample < HOP_SIZE; iSample++)
+        for (int iSample = 0; iSample < BLOCKSIZE; iSample++)
         {
-            for (int iChannel = 0; iChannel < CHANNELS_OUT; iChannel++) {
-                short sample = floor((*(in[iChannel] + iSample)) * 32767);
+            for (int iChannel = 0; iChannel < CHANNELS; iChannel++) {
+                short sample = floor(in[iChannel][iSample] * 32767);
                 m_file.write((char*)(&sample), 2);
+
+                m_numSamples++;
             }
 
-            m_numSamples++;
+            
         }
 
         m_isClear = true;

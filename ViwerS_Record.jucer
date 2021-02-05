@@ -6,10 +6,21 @@
     <GROUP id="{B8F04FC8-8541-9042-9409-7D4AB3A28757}" name="Source">
       <FILE id="YFEDN1" name="Main.cpp" compile="1" resource="0" file="Source/Main.cpp"/>
       <FILE id="odAefH" name="MainComponent.h" compile="0" resource="0" file="Source/MainComponent.h"/>
+      <FILE id="beuME1" name="Constants.h" compile="0" resource="0" file="Source/Constants.h"/>
       <FILE id="reSV1o" name="MainComponent.cpp" compile="1" resource="0"
             file="Source/MainComponent.cpp"/>
       <FILE id="OIoSFW" name="WavWriter.cpp" compile="1" resource="0" file="Source/WavWriter.cpp"/>
       <FILE id="OhonSX" name="WavWriter.h" compile="0" resource="0" file="Source/WavWriter.h"/>
+    </GROUP>
+    <GROUP id="{C39558DD-8DCB-5E4E-21B9-378B31E7C60D}" name="images">
+      <FILE id="tK2SqM" name="button_Record.png" compile="0" resource="1"
+            file="images/button_Record.png"/>
+      <FILE id="JqDbPS" name="button_Record_active.png" compile="0" resource="1"
+            file="images/button_Record_active.png"/>
+      <FILE id="jhWhIs" name="button_Record_active_down.png" compile="0"
+            resource="1" file="images/button_Record_active_down.png"/>
+      <FILE id="odHD5G" name="button_Record_down.png" compile="0" resource="1"
+            file="images/button_Record_down.png"/>
     </GROUP>
   </MAINGROUP>
   <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1"/>
